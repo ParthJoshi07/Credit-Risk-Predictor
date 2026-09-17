@@ -1,77 +1,83 @@
-Credit Risk Predictor
+# 💳 Credit Risk Predictor
 
-A full-stack machine learning application that predicts the credit risk of a loan applicant based on financial and personal attributes.
+A **full-stack machine learning application** designed to predict the **credit risk of loan applicants** using financial and personal attributes.
 
-The project combines a trained machine learning model with a FastAPI backend and a React-based frontend to provide real-time credit risk predictions through an interactive web interface.
+The project integrates a trained **Machine Learning model** with a **FastAPI REST API** and an interactive **React.js frontend**, enabling users to enter applicant information and receive **real-time credit risk predictions**.
 
-Tech Stack
+---
 
-Frontend: React.js, Vite, JavaScript, HTML, CSS
+## 🚀 Tech Stack
 
-Backend: Python, FastAPI
+| Layer                | Technologies                          |
+| -------------------- | ------------------------------------- |
+| **Frontend**         | React.js, Vite, JavaScript, HTML, CSS |
+| **Backend**          | Python, FastAPI                       |
+| **Machine Learning** | Scikit-learn, Pandas, NumPy           |
+| **Model Serving**    | Joblib                                |
+| **API Architecture** | REST API                              |
 
-Machine Learning: Scikit-learn, Pandas, NumPy
+---
 
-Model Serving: Joblib
+## 📁 Project Structure
 
-API: REST API
-
-Project Structure
-
+```text
 Credit-Risk-Predictor/
+│
 ├── frontend/          # React + Vite web application
-├── backend/           # ML pipeline and FastAPI service
-├── artifacts/         # Trained model and generated artifacts
-└── README.md
+│
+├── backend/           # Python ML pipeline & FastAPI service
+│
+├── artifacts/         # Trained models and generated artifacts
+│
+└── README.md          # Project documentation
+```
 
-Key Features
+---
 
-Credit risk prediction using a trained ML model
+## ✨ Key Features
 
-Feature engineering and data preprocessing
+* 🤖 **Machine Learning Prediction** — Predicts applicant credit risk using a trained ML model.
+* ⚙️ **Feature Engineering** — Processes and transforms raw applicant information into model-ready features.
+* 🚀 **FastAPI Backend** — Provides a fast REST API for serving predictions.
+* 💻 **Interactive Frontend** — React-based interface for entering applicant information and viewing results.
+* ⚡ **Real-Time Predictions** — Sends applicant data to the backend and returns predictions instantly.
+* ✅ **Input Validation** — Validates incoming data before passing it to the prediction pipeline.
+* 🔄 **Feature Mapping** — Converts frontend inputs into the exact feature format required by the trained model.
+* 🧩 **Modular Architecture** — Separates the frontend, API, ML pipeline, and model artifacts for easier development and maintenance.
 
-FastAPI-based prediction API
+---
 
-Interactive React frontend
+## 🔄 How It Works
 
-Real-time communication between frontend and backend
+```text
+┌─────────────────────┐
+│     User Input      │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│   React Frontend    │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│    FastAPI API      │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│ Input Validation &  │
+│ Feature Engineering │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│  Trained ML Model   │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│ Credit Risk Result  │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│ Display Prediction  │
+└─────────────────────┘
+```
 
-Input validation and feature mapping
-
-Modular ML pipeline for training and inference
-
-How It Works
-
-User Input
-    ↓
-React Frontend
-    ↓
-FastAPI Backend
-    ↓
-Data Validation & Feature Engineering
-    ↓
-Trained ML Model
-    ↓
-Credit Risk Prediction
-    ↓
-Result Displayed to User
-
-Setup
-
-Backend
-
-cd backend
-pip install -r requirements.txt
-uvicorn src.serve:app --reload --port 8000
-
-Frontend
-
-cd frontend
-npm install
-npm run dev
-
-The frontend connects to the FastAPI backend to send applicant data and display the predicted credit risk.
-
-Project Goal
-
-The goal of this project is to demonstrate how a machine learning model can be integrated into a production-style full-stack application, from data preprocessing and feature engineering to model serving and a user-facing web interface.
+The user enters their financial information through the **React frontend**. The data is sent to the **FastAPI backend**, where it is validated and
